@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "ESNext"
+    ],
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true
+  },
+}

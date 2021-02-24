@@ -1,0 +1,8 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "extends": ["plugin:jest/recommended"],
+  "plugins": ["@typescript-eslint", "jest"],
+  "env": {
+    "jest/globals": true
+  }
+}

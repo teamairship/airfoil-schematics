@@ -1,0 +1,23 @@
+# OSX
+#
+.DS_Store
+
+# node.js
+#
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# template ignores
+templates/**/.env
+templates/**/.env.staging
+templates/**/.env.production
+templates/**/yarn.lock
+templates/**/package.json.lock
+templates/**/ios/Podfile.lock
+
+# ENV files
+.env
+.env.backup
+.env.staging
+.env.production

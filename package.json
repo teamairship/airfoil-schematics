@@ -1,0 +1,48 @@
+{
+  "name": "airfoil-schematics",
+  "version": "1.0.0",
+  "description": "React Native boilerplate templates for the Airfoil CLI",
+  "main": "./lib/index.js",
+  "scripts": {
+    "install-blimp": "ECHO 'NOTICE: USE AIRFOIL CLI TO INIT A NEW APP!!' && cd templates/blimp && yarn install",
+    "install-jet": "ECHO 'NOTICE: USE AIRFOIL CLI TO INIT A NEW APP!!' && cd templates/jet && yarn install",
+    "install-propeller": "ECHO 'NOTICE: USE AIRFOIL CLI TO INIT A NEW APP!!' && cd templates/propeller && yarn install",
+    "install-templates": "npm-run-all --parallel install-blimp install-jet install-propeller",
+    "ios-blimp": "cd templates/blimp && yarn ios",
+    "ios-jet": "cd templates/jet && yarn ios",
+    "ios-propeller": "ECHO 'COMING SOON!' && exit 0",
+    "android-blimp": "cd templates/blimp && yarn android",
+    "android-jet": "cd templates/jet && yarn android",
+    "android-propeller": "ECHO 'COMING SOON!' && exit 0",
+    "test-blimp": "cd templates/blimp && yarn test",
+    "test-propeller": "ECHO 'COMING SOON!' && exit 0",
+    "test-jet": "cd templates/jet && yarn test",
+    "jest": "jest",
+    "test": "npm-run-all jest test-blimp test-propeller test-jet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teamairship/airfoil-schematics.git"
+  },
+  "author": "builders@teamairship.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teamairship/airfoil-schematics/issues"
+  },
+  "homepage": "https://github.com/teamairship/airfoil-schematics#readme",
+  "devDependencies": {
+    "@babel/core": "^7.13.1",
+    "@babel/preset-env": "^7.13.5",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/jest": "^26.0.20",
+    "@typescript-eslint/parser": "^4.15.2",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.20.0",
+    "eslint-plugin-jest": "^24.1.5",
+    "jest": "^26.6.3",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.2"
+  }
+}

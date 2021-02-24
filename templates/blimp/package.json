@@ -3,11 +3,20 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "android": "react-native run-android",
-    "ios": "react-native run-ios",
-    "start": "react-native start",
+    "xcode": "cd ios && xed . && cd ..",
+    "android": "adb reverse tcp:8081 tcp:8081 && npx react-native run-android",
+    "ios": "npx react-native run-ios",
+    "start": "npx react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "clean-node-modules": "rm -rf node_modules && yarn",
+    "clean-pods": "cd ios/ && rm -rf Pods && pod install && cd ../",
+    "clean-ios": "rm -rf ios/build && rm -rf ~/Library/Developer/Xcode/DerivedData && rm -rf ./ios/DerivedData",
+    "clean-android": "cd android && ./gradlew clean && cd ..",
+    "clean-rn-cache": "rm -rf $TMPDIR/react-* && rm -rf $TMPDIR/react-native-packager-cache-* && rm -rf $TMPDIR/metro-bundler-cache-* && yarn cache clean && watchman watch-del-all && npx react-native start --reset-cache",
+    "nuke": "yarn clean-node-modules && yarn clean-pods && yarn clean-ios && yarn clean-android && yarn clean-rn-cache",
+    "prettier": "npx prettier --ignore-path .gitignore --write \"app/**/*.+(tsx|jsx|ts|js)\"",
+    "postinstall": "npx jetify && (cd ios && pod install && cd ..)"
   },
   "dependencies": {
     "@react-native-community/masked-view": "^0.1.10",
