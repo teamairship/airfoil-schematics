@@ -1,49 +1,62 @@
-import React, { ReactChildren, ReactChild } from 'react';
-import { StyleSheet, StyleProp } from 'react-native';
+import React from 'react';
+import { TextProps, TextStyle, StyleSheet, StyleProp } from 'react-native';
 import { Text as ElementsText } from 'react-native-elements';
 
-interface Props {
-  children: string | string[] | ReactChildren | ReactChild | Element;
-  color?: string | null;
+import { Color, colors, globalStyles, LINE_HEIGHT_MULTIPLIER } from '../../styles/globalStyles';
+
+interface Props extends TextProps {
+  color?: Color | string | null;
   bold?: boolean;
   italic?: boolean;
-  black?: boolean;
   marginBottom?: number;
-  size?: number | null;
-  onLayout?: Function;
+  fontSize?: number | null;
   selectable?: boolean;
-  style?: StyleProp<any>;
+  style?: StyleProp<TextStyle>;
   testID?: string;
   numberOfLines?: number;
   ellipsizeMode?: 'head' | 'middle' | 'tail' | 'clip';
 }
 
-const Text: React.FC<Props> = (props) => {
+const Text: React.FC<Props> = ({
+  style,
+  bold,
+  color,
+  italic,
+  fontSize,
+  numberOfLines,
+  ellipsizeMode,
+  children,
+  testID,
+}) => {
   return (
     <ElementsText
       style={[
-        styles.textStyle,
-        props.style,
-        props.black ? { color: 'black' } : null,
-        props.bold ? { fontWeight: '800' } : null,
-        props.italic ? { fontStyle: 'italic' } : null,
-        props.marginBottom ? { marginBottom: props.marginBottom } : null,
-        props.color ? { color: props.color } : null,
-        props.size ? { fontSize: props.size } : null,
+        styles.standardText,
+        fontSize ? { fontSize, lineHeight: fontSize * LINE_HEIGHT_MULTIPLIER } : null,
+        italic ? styles.italic : null,
+        bold ? styles.bold : null,
+        color ? { color } : null,
+        style,
       ]}
-      testID={props.testID || ''}
-      numberOfLines={props.numberOfLines}
-      ellipsizeMode={props.ellipsizeMode}
+      testID={testID || ''}
+      numberOfLines={numberOfLines}
+      ellipsizeMode={ellipsizeMode}
     >
-      {props.children}
+      {children}
     </ElementsText>
   );
 };
 
 const styles = StyleSheet.create({
-  textStyle: {
-    color: 'black',
-    fontFamily: 'Avenir-Medium',
+  bold: {
+    fontWeight: '800',
+  },
+  italic: {
+    fontStyle: 'italic',
+  },
+  standardText: {
+    ...globalStyles.standardText,
+    color: colors.black,
   },
 });
 

@@ -3,12 +3,12 @@ require_relative '../node_modules/@react-native-community/cli-platform-ios/nativ
 
 platform :ios, '10.0'
 
-target 'HelloWorld' do
+target 'jet' do
   config = use_native_modules!
 
-  use_react_native!(:path => config["reactNativePath"])
+  use_react_native!(path: config['reactNativePath'])
 
-  target 'HelloWorldTests' do
+  target 'jetTests' do
     inherit! :complete
     # Pods for testing
   end
@@ -17,16 +17,16 @@ target 'HelloWorld' do
   #
   # Note that if you have use_frameworks! enabled, Flipper will not work and
   # you should disable these next few lines.
-  use_flipper!
+  use_flipper!({ 'Flipper-Folly' => '2.3.0' })
   post_install do |installer|
     flipper_post_install(installer)
   end
 end
 
-target 'HelloWorld-tvOS' do
-  # Pods for HelloWorld-tvOS
+target 'jet-tvOS' do
+  # Pods for jet-tvOS
 
-  target 'HelloWorld-tvOSTests' do
+  target 'jet-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end

@@ -1,10 +1,10 @@
 import { ApolloClient, InMemoryCache, ApolloLink, HttpLink } from '@apollo/client';
 import { onError } from '@apollo/client/link/error';
 
-import { API_BASE_URL } from '@/constants';
+import { API_BASE_URL } from '../constants';
 
 function reportGraphQLError(err: Error, operation: any) {
-  // TODO: add error reporting
+  // TODO: ADD ERROR REPORTING
   // bugsnag.notify(
   //   new Error(`[GraphQL error]: Message: ${err.message}`),
   //   (event: any) => {
@@ -19,7 +19,7 @@ function reportGraphQLError(err: Error, operation: any) {
 }
 
 function reportNetworkError(err: Error) {
-  // TODO: add error reporting
+  // TODO: ADD ERROR REPORTING
   // bugsnag.notify(new Error(`[Network Error]: ${err.message}`), (event: any) => {
   //   event.severity = 'info';
   //   event.context = 'ApolloWrapper errorLink networkError';
@@ -29,7 +29,7 @@ function reportNetworkError(err: Error) {
 }
 
 function report401Error(err: Error) {
-  // TODO: add error reporting
+  // TODO: ADD ERROR REPORTING
   // bugsnag.notify(new Error(`Network Error: ${err.message}: Logging Out`), (event: any) => {
   //   event.severity = 'info';
   //   event.context = 'ApolloWrapper errorLink networkError';

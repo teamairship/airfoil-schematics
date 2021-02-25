@@ -9,7 +9,7 @@ const Screen: React.FC<Props> = ({ barStyle = 'dark-content', children }) => {
   return (
     <>
       <StatusBar barStyle={barStyle} />
-      <SafeAreaView>{children}</SafeAreaView>
+      <SafeAreaView style={{ flex: 1 }}>{children}</SafeAreaView>
     </>
   );
 };

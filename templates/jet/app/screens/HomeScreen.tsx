@@ -1,47 +1,33 @@
 import React from 'react';
-import { useQuery } from '@apollo/client';
-import { ScrollView } from 'react-native-gesture-handler';
+import { StyleSheet } from 'react-native';
 
-import { GET_UPCOMING_LAUNCHES } from '@/graphql/queries';
-import Loader from '@/components/common/Loader';
-import View from '@/components/common/View';
-import Text from '@/components/common/Text';
-import Launch from '@/components/Launch';
-import Screen from '@/components/common/Screen';
+import View from '../components/common/View';
+import Text from '../components/common/Text';
+import Screen from '../components/common/Screen';
+import JetIcon from '../assets/JetIcon';
+import { globalStyles } from '../styles/globalStyles';
 
 const HomeScreen = () => {
-  const { loading, error, data } = useQuery(GET_UPCOMING_LAUNCHES);
-  if (loading) return <Loader />;
-
-  if (!data?.launchesUpcoming?.length)
-    return (
-      <Screen>
-        <View>
-          <Text>No upcoming launches at this time.</Text>
-        </View>
-      </Screen>
-    );
-
-  if (error) {
-    console.error(error);
-    return (
-      <Screen>
-        <View>
-          <Text>Something went wrong.</Text>
-        </View>
-      </Screen>
-    );
-  }
-
   return (
     <Screen>
-      <ScrollView>
-        {data.launchesUpcoming.map((launch: any, index: number) => (
-          <Launch key={`${index}_${launch.id}`} data={launch} />
-        ))}
-      </ScrollView>
+      <View style={styles.container}>
+        <JetIcon containerStyle={styles.icon} />
+        <Text>Welcome.</Text>
+        <Text>Let's get started.</Text>
+      </View>
     </Screen>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  icon: {
+    marginBottom: globalStyles.standardPadding * 2,
+  },
+});
 
 export default HomeScreen;

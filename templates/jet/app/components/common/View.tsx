@@ -1,15 +1,14 @@
 import React, { ForwardRefExoticComponent } from 'react';
 import { View as RNView, ViewProps, StyleSheet, StyleProp, ViewStyle } from 'react-native';
 
-interface Props {
+interface Props extends ViewProps {
   row?: boolean;
   marginTop?: number;
   marginBottom?: number;
   style?: StyleProp<ViewStyle>;
 }
 
-// eslint-disable-next-line react/display-name
-const View: React.FC<Props & ViewProps> &
+const View: React.FC<Props> &
   ForwardRefExoticComponent<any> = React.forwardRef(
   ({ row, style, marginTop, marginBottom, ...props }, ref: any) => (
     <RNView

@@ -1,5 +1,5 @@
 {
-  "name": "HelloWorld",
+  "name": "jet",
   "description": "",
   "version": "0.0.1",
   "private": true,
@@ -29,10 +29,12 @@
     "react-native": "0.63.4",
     "react-native-config": "^1.4.2",
     "react-native-elements": "^3.2.0",
+    "react-native-error-boundary": "^1.1.6",
     "react-native-gesture-handler": "^1.9.0",
     "react-native-reanimated": "^1.13.2",
     "react-native-safe-area-context": "^3.1.9",
     "react-native-screens": "^2.15.1",
+    "react-native-svg": "^12.1.0",
     "react-native-vector-icons": "^8.0.0"
   },
   "devDependencies": {
