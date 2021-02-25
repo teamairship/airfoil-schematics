@@ -1,6 +1,6 @@
 # Airfoil Schematics
 
-![Airfoil Schematics](/assets/airfoil-schematics.png)
+![Airfoil Schematics](/assets/airfoil-schematics.jpg)
 
 React Native boilerplate templates for the [Airfoil CLI](https://github.com/teamairship/airfoil).
 
