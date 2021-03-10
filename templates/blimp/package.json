@@ -19,6 +19,7 @@
     "postinstall": "npx jetify && (cd ios && pod install && cd ..)"
   },
   "dependencies": {
+    "@airship/rn-components": "^0.1.2",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/native": "^5.9.0",
     "axios": "^0.21.1",
