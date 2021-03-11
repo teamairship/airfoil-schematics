@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import ErrorBoundary from 'react-native-error-boundary';
+import { AnimatedFade, AnimatedMove } from '@airship/rn-components';
 
 import { Blimp } from './assets/icons/Blimp';
 import { globalStyles } from './styles/globalStyles';
@@ -21,7 +22,11 @@ const App = () => {
     <ErrorBoundary onError={applicationErrorHandler}>
       <NavigationContainer>
         <View style={styles.container}>
-          <Blimp containerStyle={styles.icon} />
+          <AnimatedMove startY={-15}>
+            <AnimatedFade>
+              <Blimp containerStyle={styles.icon} />
+            </AnimatedFade>
+          </AnimatedMove>
           <Text>Welcome.</Text>
           <Text>Let's get started.</Text>
         </View>

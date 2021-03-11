@@ -20,6 +20,7 @@
     "postinstall": "npx jetify && (cd ios && pod install && cd ..)"
   },
   "dependencies": {
+    "@airship/rn-components": "^0.2.0",
     "@apollo/client": "^3.3.9",
     "@react-native-community/masked-view": "^0.1.10",
     "@react-navigation/native": "^5.9.0",
@@ -66,6 +67,9 @@
     },
     "setupFiles": [
       "<rootDir>/jest/setup.js"
+    ],
+    "transformIgnorePatterns": [
+      "<root_dir>/node_modules/(?!(@airship/rn-components)/)"
     ]
   }
 }
