@@ -58,8 +58,11 @@
       "json",
       "node"
     ],
+    "setupFiles": [
+      "<rootDir>/jest/setup.js"
+    ],
     "transformIgnorePatterns": [
-      "/node_modules/(?!(@airship/rn-components)/)"
+      "<root_dir>/node_modules/(?!(@airship/rn-components)/)"
     ]
   }
 }
