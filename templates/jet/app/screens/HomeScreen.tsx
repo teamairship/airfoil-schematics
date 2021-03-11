@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
-import { AnimatedMove } from '@airship/rn-components';
+import { AnimatedFade, AnimatedMove } from '@airship/rn-components';
 
 import View from '../components/common/View';
 import Text from '../components/common/Text';
@@ -13,7 +13,9 @@ const HomeScreen = () => {
     <Screen>
       <View style={styles.container}>
         <AnimatedMove startY={-15}>
-          <JetIcon containerStyle={styles.icon} />
+          <AnimatedFade>
+            <JetIcon containerStyle={styles.icon} />
+          </AnimatedFade>
         </AnimatedMove>
         <Text>Welcome.</Text>
         <Text>Let's get started.</Text>

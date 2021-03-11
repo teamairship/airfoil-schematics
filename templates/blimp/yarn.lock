@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@airship/rn-components@^0.1.2":
-  version "0.1.2"
-  resolved "https://registry.yarnpkg.com/@airship/rn-components/-/rn-components-0.1.2.tgz#6ac9c14ac8a96c838b470f4efc6fb78f431f8705"
-  integrity sha512-7jl9Y9OIeVAy/EcumTPBXOTV9zw6PFrRwu6wkbL/8yRFq0OWWbay4RBOvV/uZIvEfydC6gwk9vCO1PFrsjPNmQ==
+"@airship/rn-components@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@airship/rn-components/-/rn-components-0.2.0.tgz#a8b318db6086cd4bab759444be44420fddaa6751"
+  integrity sha512-ORBdyhvHXmqPwu1tfP251ES8JwOXX/iKEke9UbiUQMzz80mCipQCDunTEh4YupioxVLVWD3uA3ygGoNTtPHJtw==
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4", "@babel/code-frame@^7.12.11":
   version "7.12.11"
