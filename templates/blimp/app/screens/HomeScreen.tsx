@@ -1,11 +1,11 @@
 import React from 'react';
-import { AnimatedFade, AnimatedMove } from '@airship/rn-components';
 import { StyleSheet } from 'react-native';
+import { AnimatedFade, AnimatedMove } from '@airship/rn-components';
 
-import JetIcon from '../assets/JetIcon';
-import { Screen } from '../components/common/Screen';
-import { Text } from '../components/common/Text';
 import { View } from '../components/common/View';
+import { Text } from '../components/common/Text';
+import { Screen } from '../components/common/Screen';
+import { Blimp } from '../assets/icons/Blimp';
 import { globalStyles } from '../styles/globalStyles';
 
 export const HomeScreen = () => {
@@ -14,7 +14,7 @@ export const HomeScreen = () => {
       <View style={styles.container}>
         <AnimatedMove startY={-15}>
           <AnimatedFade>
-            <JetIcon containerStyle={styles.icon} />
+            <Blimp containerStyle={styles.icon} />
           </AnimatedFade>
         </AnimatedMove>
         <Text>Welcome.</Text>

@@ -1,10 +1,9 @@
 import React from 'react';
-import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { NavigationContainer } from '@react-navigation/native';
 import ErrorBoundary from 'react-native-error-boundary';
-
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 import ApolloWrapper from './apollo/ApolloWrapper';
 import MainNavigator from './navigation/MainNavigator';
-import NavigationWrapper from './navigation/NavigationWrapper';
 
 const applicationErrorHandler = (error: Error, stackTrace: string) => {
   if (__DEV__) console.log('Application Handler', { error, stackTrace });
@@ -17,9 +16,9 @@ const App = () => {
     <ErrorBoundary onError={applicationErrorHandler}>
       <SafeAreaProvider>
         <ApolloWrapper>
-          <NavigationWrapper>
+          <NavigationContainer>
             <MainNavigator />
-          </NavigationWrapper>
+          </NavigationContainer>
         </ApolloWrapper>
       </SafeAreaProvider>
     </ErrorBoundary>
