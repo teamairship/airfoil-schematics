@@ -17,7 +17,7 @@ interface Props extends TextProps {
   ellipsizeMode?: 'head' | 'middle' | 'tail' | 'clip';
 }
 
-const Text: React.FC<Props> = ({
+export const Text: React.FC<Props> = ({
   style,
   bold,
   color,
@@ -59,5 +59,3 @@ const styles = StyleSheet.create({
     color: colors.black,
   },
 });
-
-export default Text;

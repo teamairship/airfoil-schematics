@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleProp, ViewStyle } from 'react-native';
 import { Svg, G, Path } from 'react-native-svg';
 
-import View from '../components/common/View';
+import { View } from '../components/common/View';
 import { colors } from '../styles/globalStyles';
 
 type Props = {

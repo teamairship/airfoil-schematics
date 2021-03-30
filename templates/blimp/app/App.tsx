@@ -1,13 +1,10 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
+import { StyleSheet } from 'react-native';
 import ErrorBoundary from 'react-native-error-boundary';
-import { AnimatedFade, AnimatedMove } from '@airship/rn-components';
-
-import { Blimp } from './assets/icons/Blimp';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { MainNavigator } from './navigation/MainNavigator';
 import { globalStyles } from './styles/globalStyles';
-import { Text } from './components/Text/Text';
-import { View } from './components/View/View';
 
 declare const global: { HermesInternal: null | {} };
 
@@ -19,19 +16,13 @@ const applicationErrorHandler = (error: Error, stackTrace: string) => {
 
 const App = () => {
   return (
-    <ErrorBoundary onError={applicationErrorHandler}>
-      <NavigationContainer>
-        <View style={styles.container}>
-          <AnimatedMove startY={-15}>
-            <AnimatedFade>
-              <Blimp containerStyle={styles.icon} />
-            </AnimatedFade>
-          </AnimatedMove>
-          <Text>Welcome.</Text>
-          <Text>Let's get started.</Text>
-        </View>
-      </NavigationContainer>
-    </ErrorBoundary>
+    <SafeAreaProvider>
+      <ErrorBoundary onError={applicationErrorHandler}>
+        <NavigationContainer>
+          <MainNavigator />
+        </NavigationContainer>
+      </ErrorBoundary>
+    </SafeAreaProvider>
   );
 };
 

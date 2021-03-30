@@ -8,7 +8,7 @@ interface Props extends ViewProps {
   style?: StyleProp<ViewStyle>;
 }
 
-const View: React.FC<Props> &
+export const View: React.FC<Props> &
   ForwardRefExoticComponent<any> = React.forwardRef(
   ({ row, style, marginTop, marginBottom, ...props }, ref: any) => (
     <RNView
@@ -30,5 +30,3 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
-
-export default View;
