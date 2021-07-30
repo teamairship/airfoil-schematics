@@ -12,10 +12,6 @@ All templates have some common libraries baked into them such as [React Navigati
 
 A minimalist app built on Axios and the Context API.
 
-### [PROPELLER](./templates/propeller)
-
-_COMING SOON_ - A bare-bones implementation of Redux and REST.
-
 ### [JET](./templates/jet)
 
 A turbocharged starter-kit using Apollo Client and GraphQL.
