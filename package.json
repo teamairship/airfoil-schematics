@@ -6,19 +6,15 @@
   "scripts": {
     "install-blimp": "ECHO 'NOTICE: USE AIRFOIL CLI TO INIT A NEW APP!!' && cd templates/blimp && yarn install",
     "install-jet": "ECHO 'NOTICE: USE AIRFOIL CLI TO INIT A NEW APP!!' && cd templates/jet && yarn install",
-    "install-propeller": "ECHO 'NOTICE: USE AIRFOIL CLI TO INIT A NEW APP!!' && cd templates/propeller && yarn install",
-    "install-templates": "npm-run-all --parallel install-blimp install-jet install-propeller",
+    "install-templates": "npm-run-all --parallel install-blimp install-jet",
     "ios-blimp": "cd templates/blimp && yarn ios",
     "ios-jet": "cd templates/jet && yarn ios",
-    "ios-propeller": "ECHO 'COMING SOON!' && exit 0",
     "android-blimp": "cd templates/blimp && yarn android",
     "android-jet": "cd templates/jet && yarn android",
-    "android-propeller": "ECHO 'COMING SOON!' && exit 0",
     "test-blimp": "cd templates/blimp && yarn test",
-    "test-propeller": "ECHO 'COMING SOON!' && exit 0",
     "test-jet": "cd templates/jet && yarn test",
     "jest": "jest",
-    "test": "npm-run-all jest test-blimp test-propeller test-jet"
+    "test": "npm-run-all jest test-blimp test-jet"
   },
   "repository": {
     "type": "git",
