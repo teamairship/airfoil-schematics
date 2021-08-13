@@ -4,7 +4,7 @@ import { requestTransformer, responseTransformer } from './transformers';
 import { Action, ApiResponse, RequestParams } from './baseService.types';
 
 const baseService = axios.create({
-  baseURL: Config.API_BASE_URL,
+  baseURL: Config.API_BASE_URL ?? '',
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
@@ -47,21 +47,21 @@ async function baseRequest<ReturnType>(method: Action, endpoint: string, params:
 }
 
 export async function fetch<ReturnType>(endpoint: string, params: RequestParams) {
-  return baseRequest<ReturnType>('get', endpoint, params);
+  return baseRequest<ReturnType>(Action.get, endpoint, params);
 }
 
 export async function post<ReturnType>(endpoint: string, params: RequestParams) {
-  return baseRequest<ReturnType>('post', endpoint, params);
+  return baseRequest<ReturnType>(Action.post, endpoint, params);
 }
 
 export async function patch<ReturnType>(endpoint: string, params: RequestParams) {
-  return baseRequest<ReturnType>('patch', endpoint, params);
+  return baseRequest<ReturnType>(Action.patch, endpoint, params);
 }
 
 export async function put<ReturnType>(endpoint: string, params: RequestParams) {
-  return baseRequest<ReturnType>('put', endpoint, params);
+  return baseRequest<ReturnType>(Action.put, endpoint, params);
 }
 
 export async function destroy<ReturnType>(endpoint: string, params: RequestParams) {
-  return baseRequest<ReturnType>('delete', endpoint, params);
+  return baseRequest<ReturnType>(Action.delete, endpoint, params);
 }

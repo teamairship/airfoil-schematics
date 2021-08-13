@@ -4,7 +4,7 @@ import { HomeScreen } from '../screens/HomeScreen';
 
 const Stack = createStackNavigator();
 
-const MainNavigator = () => {
+export const MainNavigator = () => {
   return (
     <>
       <Stack.Navigator>

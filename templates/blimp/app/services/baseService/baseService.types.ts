@@ -1,4 +1,10 @@
-export type Action = 'get' | 'post' | 'put' | 'patch' | 'delete';
+export enum Action {
+  get = 'get',
+  post = 'post',
+  put = 'put',
+  patch = 'patch',
+  delete = 'delete',
+}
 
 export type ApiResponse<ResponseType> = {
   data: ResponseType;

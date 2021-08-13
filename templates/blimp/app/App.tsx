@@ -1,12 +1,8 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { StyleSheet } from 'react-native';
 import ErrorBoundary from 'react-native-error-boundary';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { MainNavigator } from './navigation/MainNavigator';
-import { globalStyles } from './styles/globalStyles';
-
-declare const global: { HermesInternal: null | {} };
 
 const applicationErrorHandler = (error: Error, stackTrace: string) => {
   if (__DEV__) console.log('Application Handler', { error, stackTrace });
@@ -16,25 +12,14 @@ const applicationErrorHandler = (error: Error, stackTrace: string) => {
 
 const App = () => {
   return (
-    <SafeAreaProvider>
-      <ErrorBoundary onError={applicationErrorHandler}>
+    <ErrorBoundary onError={applicationErrorHandler}>
+      <SafeAreaProvider>
         <NavigationContainer>
           <MainNavigator />
         </NavigationContainer>
-      </ErrorBoundary>
-    </SafeAreaProvider>
+      </SafeAreaProvider>
+    </ErrorBoundary>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  icon: {
-    marginBottom: globalStyles.standardPadding * 2,
-  },
-});
 
 export default App;
