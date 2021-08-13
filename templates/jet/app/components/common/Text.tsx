@@ -5,7 +5,7 @@ import { Text as ElementsText } from 'react-native-elements';
 import { Color, colors, globalStyles, LINE_HEIGHT_MULTIPLIER } from '../../styles/globalStyles';
 
 interface Props extends TextProps {
-  color?: Color | string;
+  color?: Color | string | null;
   bold?: boolean;
   italic?: boolean;
   marginBottom?: number;

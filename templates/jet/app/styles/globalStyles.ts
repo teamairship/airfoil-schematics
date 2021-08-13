@@ -6,11 +6,7 @@ export const SCREEN_WIDTH = Dimensions.get('screen').width;
 const STANDARD_FONT_SIZE = 16;
 export const LINE_HEIGHT_MULTIPLIER = 1.7;
 
-export enum Color {
-  black = 'black',
-  trueBlack = 'trueBlack',
-  orange = 'orange',
-}
+export type Color = 'black' | 'trueBlack' | 'orange';
 
 export const colors: { [key in Color]: string } = {
   black: '#121212',

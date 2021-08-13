@@ -4,7 +4,7 @@ import { HomeScreen } from '../screens/HomeScreen';
 
 const Stack = createStackNavigator();
 
-export const MainNavigator = () => {
+const MainNavigator = () => {
   return (
     <>
       <Stack.Navigator>
@@ -13,3 +13,5 @@ export const MainNavigator = () => {
     </>
   );
 };
+
+export default MainNavigator;
