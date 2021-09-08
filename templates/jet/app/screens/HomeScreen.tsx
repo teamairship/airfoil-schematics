@@ -2,7 +2,7 @@ import React from 'react';
 import { AnimatedFade, AnimatedMove } from '@airship/rn-components';
 import { StyleSheet } from 'react-native';
 
-import JetIcon from '../assets/JetIcon';
+import JetIcon from '../assets/icons/JetIcon';
 import { Screen } from '../components/common/Screen';
 import { Text } from '../components/common/Text';
 import { View } from '../components/common/View';
