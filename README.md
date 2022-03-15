@@ -89,3 +89,7 @@ Make sure all tests are passing.
 ## Issues
 
 All feature requests, bug reports, questions, etc. welcome! [Please submit issues here](https://github.com/teamairship/airfoil-schematics/issues).
+
+## Updates and Fixes
+
+- Added resolver as a workaround by configuring Metro to understand the .cjs file extension until [this issue](https://github.com/facebook/metro/issues/535) is resolved. Solution found in Apollo Client 3.5.4 release notices [here](https://github.com/apollographql/apollo-client/releases)
