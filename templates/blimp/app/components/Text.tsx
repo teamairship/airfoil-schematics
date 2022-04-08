@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { StyleProp, StyleSheet, Text as RNText, TextProps, TextStyle } from 'react-native';
-import { colors, globalStyles, LINE_HEIGHT_MULTIPLIER } from '../../styles/globalStyles';
+import { Colors, globalStyles, LINE_HEIGHT_MULTIPLIER } from '../styles/globalStyles';
 
 type Props = TextProps & {
   bold?: boolean;
@@ -33,6 +33,6 @@ const styles = StyleSheet.create({
   italic: { fontStyle: 'italic' },
   standardText: {
     ...globalStyles.standardText,
-    color: colors.black,
+    color: Colors.black,
   },
 });
