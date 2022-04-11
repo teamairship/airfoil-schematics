@@ -1,11 +1,10 @@
 import React from 'react';
-import { AnimatedFade, AnimatedMove } from '@airship/rn-components';
 import { StyleSheet } from 'react-native';
-
+import { AnimatedFade, AnimatedMove } from '@airship/rn-components';
 import JetIcon from '../assets/icons/JetIcon';
-import { Screen } from '../components/common/Screen';
-import { Text } from '../components/common/Text';
-import { View } from '../components/common/View';
+import { Screen } from '../components/Screen';
+import { Text } from '../components/Text';
+import { View } from '../components/View';
 import { globalStyles } from '../styles/globalStyles';
 
 export const HomeScreen = () => {

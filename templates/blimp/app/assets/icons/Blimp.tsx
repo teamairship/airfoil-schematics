@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { StyleProp, View, ViewStyle } from 'react-native';
 import Svg, { G, Path } from 'react-native-svg';
-import { colors } from '../../styles/globalStyles';
+import { Colors } from '../../styles/globalStyles';
 
 type Props = {
   containerStyle?: StyleProp<ViewStyle>;
@@ -9,7 +9,7 @@ type Props = {
   size?: number;
 };
 
-export const Blimp: FC<Props> = ({ containerStyle, color = colors.orange, size = 50 }) => {
+export const Blimp: FC<Props> = ({ containerStyle, color = Colors.orange, size = 50 }) => {
   return (
     <View style={containerStyle}>
       <Svg viewBox="0 0 100 100" width={size} height={size}>

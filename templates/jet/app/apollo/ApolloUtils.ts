@@ -3,41 +3,41 @@ import { onError } from '@apollo/client/link/error';
 
 import { API_BASE_URL } from '../constants';
 
-function reportGraphQLError(err: Error, operation: any) {
-  // TODO: ADD ERROR REPORTING
-  // bugsnag.notify(
-  //   new Error(`[GraphQL error]: Message: ${err.message}`),
-  //   (event: any) => {
-  //     // See: https://docs.bugsnag.com/platforms/javascript/reporting-handled-errors/#customizing-diagnostic-data
-  //     event.severity = "error";
-  //     event.context = "ApolloWrapper errorLink";
-  //     event.addMetadata("graphql", "operationName", operation?.operationName);
-  //     event.addMetadata("graphql", "query", operation?.query?.loc?.source?.body);
-  //     event.addMetadata("graphql", "variables", JSON.stringify(operation.variables || {}));
-  //   }
-  // )
-}
+// function reportGraphQLError(err: Error, operation: any) {
+// TODO: ADD ERROR REPORTING
+// bugsnag.notify(
+//   new Error(`[GraphQL error]: Message: ${err.message}`),
+//   (event: any) => {
+//     // See: https://docs.bugsnag.com/platforms/javascript/reporting-handled-errors/#customizing-diagnostic-data
+//     event.severity = "error";
+//     event.context = "ApolloWrapper errorLink";
+//     event.addMetadata("graphql", "operationName", operation?.operationName);
+//     event.addMetadata("graphql", "query", operation?.query?.loc?.source?.body);
+//     event.addMetadata("graphql", "variables", JSON.stringify(operation.variables || {}));
+//   }
+// )
+// }
 
-function reportNetworkError(err: Error) {
-  // TODO: ADD ERROR REPORTING
-  // bugsnag.notify(new Error(`[Network Error]: ${err.message}`), (event: any) => {
-  //   event.severity = 'info';
-  //   event.context = 'ApolloWrapper errorLink networkError';
-  //   // @ts-ignore
-  //   event.addMetadata('network', 'statusCode', networkError.statusCode);
-  // });
-}
+// function reportNetworkError(err: Error) {
+// TODO: ADD ERROR REPORTING
+// bugsnag.notify(new Error(`[Network Error]: ${err.message}`), (event: any) => {
+//   event.severity = 'info';
+//   event.context = 'ApolloWrapper errorLink networkError';
+//   // @ts-ignore
+//   event.addMetadata('network', 'statusCode', networkError.statusCode);
+// });
+// }
 
-function report401Error(err: Error) {
-  // TODO: ADD ERROR REPORTING
-  // bugsnag.notify(new Error(`Network Error: ${err.message}: Logging Out`), (event: any) => {
-  //   event.severity = 'info';
-  //   event.context = 'ApolloWrapper errorLink networkError';
-  //   // @ts-ignore
-  //   event.addMetadata('network', 'statusCode', networkError.statusCode);
-  //   event.addMetadata('network', 'logOutReason', 'User tried to make an unauthorized request');
-  // });
-}
+// function report401Error(err: Error) {
+// TODO: ADD ERROR REPORTING
+// bugsnag.notify(new Error(`Network Error: ${err.message}: Logging Out`), (event: any) => {
+//   event.severity = 'info';
+//   event.context = 'ApolloWrapper errorLink networkError';
+//   // @ts-ignore
+//   event.addMetadata('network', 'statusCode', networkError.statusCode);
+//   event.addMetadata('network', 'logOutReason', 'User tried to make an unauthorized request');
+// });
+// }
 
 export function useApolloClient() {
   // @ts-ignore
