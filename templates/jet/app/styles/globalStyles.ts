@@ -6,21 +6,15 @@ export const SCREEN_WIDTH = Dimensions.get('screen').width;
 const STANDARD_FONT_SIZE = 16;
 export const LINE_HEIGHT_MULTIPLIER = 1.7;
 
-export enum Color {
-  black = 'black',
-  trueBlack = 'trueBlack',
-  orange = 'orange',
+export enum Colors {
+  black = '#121212',
+  trueBlack = '#000000',
+  orange = '#ff2a14',
 }
-
-export const colors: { [key in Color]: string } = {
-  black: '#121212',
-  trueBlack: '#000000',
-  orange: '#ff2a14',
-};
 
 export const globalStyles = {
   standardText: {
-    color: colors.black,
+    color: Colors.black,
     fontSize: STANDARD_FONT_SIZE,
     lineHeight: STANDARD_FONT_SIZE * LINE_HEIGHT_MULTIPLIER,
   },
@@ -28,7 +22,7 @@ export const globalStyles = {
   standardPadding: 8,
   shadow: {
     elevation: 8,
-    shadowColor: colors.black,
+    shadowColor: Colors.black,
     shadowOffset: { width: 0, height: 5 },
     shadowOpacity: 0.13,
     shadowRadius: 6.27,

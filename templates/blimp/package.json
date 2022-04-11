@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "nuke": "react-native clean-project-auto && yarn && cd ios && pod install && cd ../"
   },
   "dependencies": {
     "@airship/rn-components": "^0.2.3",

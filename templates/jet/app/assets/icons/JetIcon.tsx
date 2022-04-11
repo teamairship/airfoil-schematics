@@ -1,9 +1,8 @@
 import React from 'react';
 import { StyleProp, ViewStyle } from 'react-native';
-import { Svg, G, Path } from 'react-native-svg';
-
-import { View } from '../../components/common/View';
-import { colors } from '../../styles/globalStyles';
+import { G, Path, Svg } from 'react-native-svg';
+import { View } from '../../components/View';
+import { Colors } from '../../styles/globalStyles';
 
 type Props = {
   containerStyle?: StyleProp<ViewStyle>;
@@ -14,8 +13,8 @@ type Props = {
 
 const JetIcon: React.FC<Props> = ({
   containerStyle,
-  color = colors.orange,
-  secondaryColor = colors.black,
+  color = Colors.orange,
+  secondaryColor = Colors.black,
   size = 100,
 }) => {
   return (
