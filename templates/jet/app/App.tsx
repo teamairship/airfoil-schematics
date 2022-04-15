@@ -1,6 +1,8 @@
 import React from 'react';
+import { StyleSheet } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import ErrorBoundary from 'react-native-error-boundary';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { ApolloWrapper } from './apollo/ApolloWrapper';
 import { MainNavigator } from './navigation/MainNavigator';
@@ -13,16 +15,24 @@ const applicationErrorHandler = (error: Error, stackTrace: string) => {
 
 const App = () => {
   return (
-    <ErrorBoundary onError={applicationErrorHandler}>
-      <SafeAreaProvider>
-        <ApolloWrapper>
-          <NavigationContainer>
-            <MainNavigator />
-          </NavigationContainer>
-        </ApolloWrapper>
-      </SafeAreaProvider>
-    </ErrorBoundary>
+    <GestureHandlerRootView style={styles.gestureHandlerContainer}>
+      <ErrorBoundary onError={applicationErrorHandler}>
+        <SafeAreaProvider>
+          <ApolloWrapper>
+            <NavigationContainer>
+              <MainNavigator />
+            </NavigationContainer>
+          </ApolloWrapper>
+        </SafeAreaProvider>
+      </ErrorBoundary>
+    </GestureHandlerRootView>
   );
 };
+
+const styles = StyleSheet.create({
+  gestureHandlerContainer: {
+    flex: 1,
+  },
+});
 
 export default App;
